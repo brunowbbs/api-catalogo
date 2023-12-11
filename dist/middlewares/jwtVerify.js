@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.jwtVerify = void 0;
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const jwtVerify = (request, response, next) => {
-    const token = request.headers?.authorization || "";
+    var _a;
+    const token = ((_a = request.headers) === null || _a === void 0 ? void 0 : _a.authorization) || "";
     if (!token) {
         return response.status(401).json({ message: "Usuario nao autorizado" });
     }
