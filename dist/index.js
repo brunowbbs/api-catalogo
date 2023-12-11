@@ -20,7 +20,7 @@ app.use(express_1.default.json());
 const upload = (0, multer_1.default)({ storage: multer_1.default.memoryStorage() });
 (0, app_1.initializeApp)(firebase_1.default.firebaseConfig);
 mongoose_1.default.connect(process.env.STRING_BANCO_DADOS ? process.env.STRING_BANCO_DADOS : "");
-app.get("/ping", (request, response) => {
+app.get("/", (request, response) => {
     return response.json({ message: "Pong" });
 });
 //USUARIOS
