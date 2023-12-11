@@ -45,7 +45,7 @@ mongoose.connect(
   process.env.STRING_BANCO_DADOS ? process.env.STRING_BANCO_DADOS : ""
 );
 
-app.get("/", (request, response) => {
+app.get("/teste", (request, response) => {
   return response.json({ message: "Pong" });
 });
 
