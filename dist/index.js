@@ -39,4 +39,4 @@ app.delete("/produtos/:id", jwtVerify_1.jwtVerify, productController_1.productCo
 app.put("/produtos/:id", jwtVerify_1.jwtVerify, upload.single("filename"), productController_1.productControllerUpdate);
 app.get("/produtos-recentes", jwtVerify_1.jwtVerify, productController_1.productControllerGetRecents);
 app.get("/produtos-por-categoria/:categoria", jwtVerify_1.jwtVerify, productController_1.productControllerGetByCategory);
-app.listen(3333, () => console.log("Servidor iniciado com sucesso"));
+app.listen(process.env.PORT, () => console.log("Servidor iniciado com sucesso"));

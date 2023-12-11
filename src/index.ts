@@ -84,4 +84,6 @@ app.get(
   productControllerGetByCategory
 );
 
-app.listen(3333, () => console.log("Servidor iniciado com sucesso"));
+app.listen(process.env.PORT, () =>
+  console.log("Servidor iniciado com sucesso")
+);
